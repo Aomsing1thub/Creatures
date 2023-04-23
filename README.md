@@ -22,6 +22,7 @@ while wait() do
 if true then
 pcall(function()
 if game:GetService("Players").LocalPlayer.PlayerGui.Character.Enabled or game:GetService("Players").LocalPlayer.PlayerGui.CustomizeGui.Enabled or game:GetService("Players").LocalPlayer.PlayerGui.Character.CreaturePreview.Enabled then
+    wait(2)
     Number = 0
     game:GetService'VirtualUser':Button1Down(Vector2.new(Number, Number))
     game:GetService'VirtualUser':Button1Up(Vector2.new(Number, Number))
@@ -48,31 +49,31 @@ end
 end
 end)
 
-g = 0
-stop = true
-spawn(function()
-while wait() do
-if stop then
-pcall(function()
-    g = g + 1
-    wait(1)
-    if g == 3 then
-        start = true
-        stop = false
-    end
-end)
-end
-end
-end)
+-- g = 0
+-- stop = true
+-- spawn(function()
+-- while wait() do
+-- if stop then
+-- pcall(function()
+--     g = g + 1
+--     wait(1)
+--     if g == 3 then
+--         start = true
+--         stop = false
+--     end
+-- end)
+-- end
+-- end
+-- end)
 
-spawn(function()
-while wait() do
-if start then
-pcall(function()
-    if game:GetService("Players").LocalPlayer.PlayerGui.Character.Enabled then
-        game:Shutdown()
-    end
-end)
-end
-end
-end)
+-- spawn(function()
+-- while wait() do
+-- if start then
+-- pcall(function()
+--     if game:GetService("Players").LocalPlayer.PlayerGui.Character.Enabled then
+--         game:Shutdown()
+--     end
+-- end)
+-- end
+-- end
+-- end)
