@@ -1,5 +1,6 @@
 repeat wait() until game:IsLoaded()
 
+wait(2)
 spawn(function()
 while wait() do
 if true then
