@@ -1,6 +1,6 @@
 repeat wait() until game:IsLoaded()
+repeat wait() until game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Character").Enabled
 
-wait(2)
 spawn(function()
 while wait() do
 if true then
