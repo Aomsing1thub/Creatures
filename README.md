@@ -47,3 +47,32 @@ end)
 end
 end
 end)
+
+g = 0
+stop = true
+spawn(function()
+while wait() do
+if stop then
+pcall(function()
+    g = g + 1
+    wait(1)
+    if g == 3 then
+        start = true
+        stop = false
+    end
+end)
+end
+end
+end)
+
+spawn(function()
+while wait() do
+if start then
+pcall(function()
+    if game:GetService("Players").LocalPlayer.PlayerGui.Character.Enabled then
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end
+end)
+end
+end
+end)
